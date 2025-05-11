@@ -23,7 +23,6 @@ HostelDekho is a full-stack web application that allows users to find and book h
    - 🔹 **[Models](Backend/models/)**
    - 🔹 **[Routes](Backend/routes/)**
    - 🔹 **[Schema](Backend/schema/)**
-   - 🔹 **[Index.js]**
-   - 🔹 **[Package.json]**
-   - 🔹 **[Package.json]**
+   - 🔹 **[Index.js](Backend/index.js)**
+   - 🔹 **[Package.json](Backend/package.json)**
 - 📁 **[Linked List](linkedlist)**
