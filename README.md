@@ -14,29 +14,30 @@ HostelDekho is a full-stack web application that allows users to find and book h
 ---
 
 ## 📁 Project Structure
-- 📁 **[Frontend](frontend/)**  
-  - 🔹 **[Components](frontend/src/components/)**  
-  - 🔹 **[Pages](frontend/src/pages/)**  
-  - 🔹 **[App.js](frontend/src/App.js)**  
 
-- 📁 **[Backend](backend/)**  
-  - 🔹 **[Config](backend/config/)**  
-    - 🔹 **[Authentication](backend/config/Authentication/)**  
-      - 📄 **[tokenGen.js](backend/config/Authentication/tokenGen.js)**  
-      - 📄 **[verifyToken.js](backend/config/Authentication/verifyToken.js)**  
-    - 🔹 **[Database Connection](backend/config/dbConnection/)**  
-      - 📄 **[dbConnection.js](backend/config/dbConnection/dbConnection.js)**  
-  - 🔹 **[Controllers](backend/controllers/)**  
-    - 📄 **[loginAndSignup.js](backend/controllers/loginAndSignup.js)**  
-  - 🔹 **[Routes](backend/routes/)**  
-    - 📄 **[userRoutes.js](backend/routes/userRoutes.js)**  
-  - 🔹 **[Schema](backend/schema/)**  
-    - 📄 **[userSchema.js](backend/schema/userSchema.js)**  
-  - 📄 **[server.js](backend/server.js)**  
-  - 📄 **[package.json](backend/package.json)**  
+- 📁 **[Frontend](frontend/)**
 
-- 📁 **[Linked List](linkedlist/)**  
-- 📄 **[.env](.env)**  
-- 📄 **[README.md](README.md)**  
+  - 🔹📁 **[Components](frontend/src/components/)**
+  - 🔹📁 **[Pages](frontend/src/pages/)**
+  - 🔹 **[App.js](frontend/src/App.js)**
+
+- 📁 **[Backend](backend/)**
+
+  - 🔹📁 **[Config](backend/config/)**
+    - 🔹📁 **[Authentication](backend/config/Authentication/)**
+      - 📄 **[tokenGen.js](backend/config/Authentication/tokenGen.js)**
+      - 📄 **[verifyToken.js](backend/config/Authentication/verifyToken.js)**
+    - 🔹📁 **[Database Connection](backend/config/dbConnection/)**
+      - 📄 **[dbConnection.js](backend/config/dbConnection/dbConnection.js)**
+  - 🔹📁 **[Controllers](backend/controllers/)**
+    - 📄 **[loginAndSignup.js](backend/controllers/loginAndSignup.js)**
+  - 🔹📁 **[Routes](backend/routes/)**
+    - 📄 **[userRoutes.js](backend/routes/userRoutes.js)**
+  - 🔹📁 **[Schema](backend/schema/)**
+    - 📄 **[userSchema.js](backend/schema/userSchema.js)**
+  - 📄 **[server.js](backend/server.js)**
+  - 📄 **[package.json](backend/package.json)**
+
+- 📄 **[.env](.env)**
+- 📄 **[README.md](README.md)**
 - 📄 **[package.json](package.json)**
-
