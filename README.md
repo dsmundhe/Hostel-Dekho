@@ -41,7 +41,7 @@ This project follows a modular structure for maintainability and scalability.
 - 📁 **[config/](backend/config/)** — Configuration files
   - 📁 **[Authentication/](backend/config/Authentication/)** — JWT utilities  
     - 📄 **[tokenGen.js](backend/config/Authentication/tokenGen.js)**  
-    - 📄 **[verifyToken.js](backend/config/Authentication/verifyToken.js)**  
+    - 📄 **[verifyToken.js](backend/config/Authentication/varifyToken.js)**  
   - 📁 **[dbConnection/](backend/config/dbConnection/)** — MongoDB connection setup  
     - 📄 **[dbConnection.js](backend/config/dbConnection/dbConnection.js)**  
 
@@ -54,12 +54,12 @@ This project follows a modular structure for maintainability and scalability.
 - 📁 **[schema/](backend/schema/)** — Mongoose schemas and models  
   - 📄 **[userSchema.js](backend/schema/userSchema.js)**  
 
-- 📄 **[server.js](backend/server.js)** — Express app entry point  
+- 📄 **[server.js](backend/index.js)** — Express app entry point  
 - 📄 **[package.json](backend/package.json)** — Backend dependencies and scripts
 
 ---
 
 ### 📄 Root Files
-- 📄 **[.env](.env)** — Environment variables
+- 📄 **[.env](Backend/)** — Environment variables
 - 📄 **[README.md](README.md)** — Project overview and documentation  
 - 📄 **[package.json](package.json)** — Project metadata and scripts
