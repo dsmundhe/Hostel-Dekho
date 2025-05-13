@@ -2,82 +2,46 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css"; // Optional if you want to separate CSS
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setNavOpen(!navOpen);
-  };
+  const toggleMenu = () => setNavOpen(!navOpen);
 
   return (
-    <div>
-      <div className="navbar flex items-center justify-between bg-gray-100 p-4">
-        {/* Logo */}
-        <div className="logo">
-          <h1 className="text-xl font-bold">Logo!</h1>
+    <div className="navbar-container">
+      {/* Top Nav */}
+      <div className="navbar flex items-center justify-between px-6 py-4 bg-white shadow-md fixed w-full z-50">
+        <div className="logo text-2xl font-bold text-blue-600">
+          <Link to="/">HostelDekho</Link>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex">
-          <ul className="flex items-center justify-center gap-8 text-base font-medium">
-            <li className="hover:text-blue-500">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="hover:text-blue-500">
-              <Link to="/">Hostels</Link>
-            </li>
-            <li className="hover:text-blue-500">
-              <Link to="/">About</Link>
-            </li>
-            <li className="hover:text-blue-500">
-              <Link to="/">Login</Link>
-            </li>
-            <li className="hover:text-blue-500">
-              <Link to="/">Signup</Link>
-            </li>
-            <li className="hover:text-blue-500 text-2xl text-blue-400">
-              <Link to="/" className="flex items-center">
-                <CgProfile />
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <ul className="hidden md:flex gap-8 items-center font-medium text-gray-700">
+          <li className="nav-link"><Link to="/">Home</Link></li>
+          <li className="nav-link"><Link to="/hostels">Hostels</Link></li>
+          <li className="nav-link"><Link to="/about">About</Link></li>
+          <li className="nav-link"><Link to="/contact">Contact</Link></li>
+          <li className="text-2xl hover:text-blue-500">
+            <Link to="/profile"><CgProfile /></Link>
+          </li>
+        </ul>
 
-        {/* Hamburger Icon (Mobile) */}
-        <div className="md:hidden z-50" onClick={toggleMenu}>
-          {navOpen ? (
-            <FaTimes className="text-2xl cursor-pointer" />
-          ) : (
-            <FaBars className="text-2xl cursor-pointer" />
-          )}
+        {/* Hamburger (Mobile) */}
+        <div className="md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
+          {navOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
 
       {/* Mobile Nav */}
-      <div
-        className={`md:hidden fixed top-0 left-0 w-full mt-5 bg-white text-black flex flex-col justify-center items-center gap-6 text-lg transition-transform duration-400 ${
-          navOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <Link onClick={toggleMenu} to="/" className="hover:text-blue-500">
-          Home
-        </Link>
-        <Link onClick={toggleMenu} to="/" className="hover:text-blue-500">
-          Hostels
-        </Link>
-        <Link onClick={toggleMenu} to="/" className="hover:text-blue-500">
-          About
-        </Link>
-        <Link onClick={toggleMenu} to="/" className="hover:text-blue-500">
-          Login
-        </Link>
-        <Link onClick={toggleMenu} to="/" className="hover:text-blue-500">
-          Signup
-        </Link>
-        <Link onClick={toggleMenu} to="/" className="text-3xl text-blue-400">
-          <CgProfile />
-        </Link>
+      <div className={`mobile-menu md:hidden fixed top-0 left-0 w-full h-screen bg-white pt-24 transition-transform duration-300 ease-in-out flex flex-col items-center gap-6 text-lg font-medium ${navOpen ? "translate-x-0" : "-translate-x-full"}`}>
+        <Link onClick={toggleMenu} to="/" className="mobile-link">Home</Link>
+        <Link onClick={toggleMenu} to="/hostels" className="mobile-link">Hostels</Link>
+        <Link onClick={toggleMenu} to="/about" className="mobile-link">About</Link>
+        <Link onClick={toggleMenu} to="/login" className="mobile-link">Login</Link>
+        <Link onClick={toggleMenu} to="/signup" className="mobile-link">Signup</Link>
+        <Link onClick={toggleMenu} to="/profile" className="text-3xl text-blue-500"><CgProfile /></Link>
       </div>
     </div>
   );
