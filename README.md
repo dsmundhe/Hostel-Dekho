@@ -13,6 +13,11 @@ HostelDekho is a full-stack web application that allows users to find and book h
 
 ---
 
+## About code
+- **Frontend**
+- **Backend**
+ ---
+
 ## 🛠️ Getting Started
 
 To get a local copy of the project up and running, follow these steps:
@@ -31,6 +36,7 @@ This project follows a modular structure for maintainability and scalability.
 ---
 
 ### 🚀 Frontend (`/Frontend`)
+
 - 📁 **[components/](frontend/src/components/)** — Reusable UI components.
 - 📁 **[pages/](frontend/src/pages/)** — Page-level components representing routes.
 - 📄 **[App.js](frontend/src/App.js)** — Main entry point for React routing and layout.
@@ -38,28 +44,37 @@ This project follows a modular structure for maintainability and scalability.
 ---
 
 ### 🔧 Backend (`/Backend`)
+
 - 📁 **[config/](Backend/config/)** — Configuration files
-  - 📁 **[Authentication/](Backend/config/Authentication/)** — JWT utilities  
-    - 📄 **[tokenGen.js](Backend/config/Authentication/tokenGen.js)**  
-    - 📄 **[verifyToken.js](Backend/config/Authentication/varifyToken.js)**  
-  - 📁 **[dbConnection/](Backend/config/dbConnection/)** — MongoDB connection setup  
-    - 📄 **[dbConnection.js](Backend/config/dbConnection/dbConnection.js)**  
 
-- 📁 **[controllers/](Backend/controllers/)** — Business logic for routes  
-  - 📄 **[loginAndSignup.js](Backend/controllers/loginAndSignup.js)**  
+  - 📁 **[Authentication/](Backend/config/Authentication/)** — JWT utilities
+    - 📄 **[tokenGen.js](Backend/config/Authentication/tokenGen.js)**
+    - 📄 **[verifyToken.js](Backend/config/Authentication/varifyToken.js)**
+  - 📁 **[dbConnection/](Backend/config/dbConnection/)** — MongoDB connection setup
+    - 📄 **[dbConnection.js](Backend/config/dbConnection/dbConnection.js)**
 
-- 📁 **[routes/](Backend/routes/)** — API route definitions  
-  - 📄 **[userRoutes.js](Backend/routes/userRoutes.js)**  
+- 📁 **[controllers/](Backend/controllers/)** — Business logic for routes
 
-- 📁 **[schema/](Backend/schema/)** — Mongoose schemas and models  
-  - 📄 **[userSchema.js](Backend/schema/userSchema.js)**  
+  - 📄 **[Login adn Signup controllers](Backend/controllers/loginAndSignup.js)**
+  - 📄 **[Edit user details](Backend/controllers/editUserDetails.js)**
+  - 📄 **[Hostel Controllers](Backend/controllers/hostelControllers.js)**
 
-- 📄 **[server.js](Backend/index.js)** — Express app entry point  
+- 📁 **[routes/](Backend/routes/)** — API route definitions
+
+  - 📄 **[User Routes](Backend/routes/userRoutes.js)**
+  - 📄 **[Hostel Routes](Backend/routes/hostelRoutes.js)**
+
+- 📁 **[schema/](Backend/schema/)** — Mongoose schemas and models
+
+  - 📄 **[userSchema.js](Backend/schema/userSchema.js)**
+
+- 📄 **[server.js](Backend/index.js)** — Express app entry point
 - 📄 **[package.json](Backend/package.json)** — Backend dependencies and scripts
 
 ---
 
 ### 📄 Root Files
+
 - 📄 **[.env](Backend/)** — Environment variables
-- 📄 **[README.md](README.md)** — Project overview and documentation  
+- 📄 **[README.md](README.md)** — Project overview and documentation
 - 📄 **[package.json](package.json)** — Project metadata and scripts
