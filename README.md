@@ -77,4 +77,4 @@ This project follows a modular structure for maintainability and scalability.
 
 - 📄 **[.env](Backend/)** — Environment variables
 - 📄 **[README.md](README.md)** — Project overview and documentation
-- 📄 **[package.json](package.json)** — Project metadata and scripts
+- 📄 **[package.json](Backend/package.json)** — Project metadata and scripts
