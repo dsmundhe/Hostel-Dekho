@@ -1,27 +1,26 @@
-const express=require('express');
-const router=express.Router();
+const express = require('express');
+const router = express.Router();
 
-const {verifyToken}=require('../config/Authentication/varifyToken');
+const { verifyToken } = require('../config/Authentication/varifyToken');
 
-const {signUp,loginFun}=require('../controllers/loginAndSignup');
+const { signUp, loginFun } = require('../controllers/loginAndSignup');
 
-const {getData}=require('../controllers/getHostels');
-
-const {deleteUser} =require('../controllers/editUserDetails');
+const { deleteUser, editName, editEmail, editPassword } = require('../controllers/editUserDetails');
 
 //login signup
-router.post('/signup',signUp);
-router.post('/login',loginFun);
+router.post('/signup', signUp);
+router.post('/login', loginFun);
 
-//get data
-router.get('/data',verifyToken,getData);
 
 //edit user details
-router.delete('/delete',verifyToken,deleteUser);
+router.delete('/delete', verifyToken, deleteUser);
+router.patch('/editname', verifyToken, editName);
+router.patch('/editemail', verifyToken, editEmail);
+router.patch('/editpassword', verifyToken, editPassword);
 
- 
 
-module.exports=router;
+
+module.exports = router;
 
 
 
