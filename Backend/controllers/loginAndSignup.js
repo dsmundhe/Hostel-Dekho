@@ -4,8 +4,8 @@ const generateToken = require('../config/Authentication/tokenGen')
 
 const signUp = async (req, res) => {
     try {
-        const { name, email, password, userType } = req.body;
-        if (!name || !email || !password || !userType) {
+        const { name, email, password, userType, image } = req.body;
+        if (!name || !email || !password || !userType || !image) {
             res.json({ msg: "Please Provide user Data!" })
             return;
         }
@@ -17,8 +17,8 @@ const signUp = async (req, res) => {
 
         const saltLen = 10;
         const hashPassword = await bcrypt.hash(password, saltLen);
-        await userModel.create({ name, email, hashPassword, userType });
-        res.json({ msg: "Signup successful!" });
+        await userModel.create({ name, email, hashPassword, userType, image });
+        res.json({ msg: "Signup successful!", data: { name, email, image } });
 
     } catch (error) {
         res.json({ result: false, msg: error.message })
@@ -44,7 +44,7 @@ const loginFun = async (req, res) => {
             return;
         }
 
-        const token =await generateToken(email);
+        const token = await generateToken(email);
         res.json({ msg: "Login Successful", token: token, user });
 
 
@@ -53,4 +53,4 @@ const loginFun = async (req, res) => {
     }
 }
 
-module.exports = { signUp ,loginFun};
+module.exports = { signUp, loginFun };
