@@ -6,6 +6,9 @@ import Login from "./Pages/Login&Signup/Login"
 import Signup from "./Pages/Login&Signup/Signup"
 import AboutPage from "./Pages/About/AboutPage";
 import Contact from "./Pages/Contact/Contact"
+import HostelManagementPage from "./Pages/Hostels/HostelManagementPage ";
+import ProfilePage from "./Pages/ProfilePage.jsx/ProfilePage";
+import ShowDetails from "./Pages/ShowHostel/ShowDetails";
 const App = () => {
   return (
     <div className="h-bg-dark-400">
@@ -17,6 +20,9 @@ const App = () => {
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/about" element={<AboutPage />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/hostels" element={<HostelManagementPage />}></Route>
+          <Route path="/profile" element={<ProfilePage />}></Route>
+          <Route path="/showhostel" element={<ShowDetails />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
