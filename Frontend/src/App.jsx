@@ -9,6 +9,8 @@ import Contact from "./Pages/Contact/Contact"
 import HostelManagementPage from "./Pages/Hostels/HostelManagementPage ";
 import ProfilePage from "./Pages/ProfilePage.jsx/ProfilePage";
 import ShowDetails from "./Pages/ShowHostel/ShowDetails";
+import BookHostel from "./Pages/BookHostel/BookHostel";
+import Payment from "./Pages/Payment_Page/Payment";
 const App = () => {
   return (
     <div className="h-bg-dark-400">
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/hostels" element={<HostelManagementPage />}></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/showhostel" element={<ShowDetails />}></Route>
+          <Route path="/bookhostel" element={<BookHostel />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
